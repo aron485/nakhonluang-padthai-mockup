@@ -139,6 +139,28 @@
   .tag{display:inline-block;background:var(--cream);color:var(--brown);font-size:11px;
     font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:50px;margin-top:14px;}
 
+  /* ===== Compare noodles table ===== */
+  .table-wrap{overflow-x:auto;border-radius:var(--radius);box-shadow:0 10px 26px rgba(79,45,29,.08);}
+  table.compare{width:100%;border-collapse:collapse;background:#fff;min-width:660px;}
+  table.compare th{background:var(--brown);color:var(--cream);font-family:'Open Sans',sans-serif;
+    font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:16px 18px;font-weight:700;}
+  table.compare td{padding:16px 18px;border-top:1px solid #ecdfc4;font-size:.95rem;color:var(--body);vertical-align:top;}
+  table.compare tr.is-this td{background:#fbf3dc;}
+  table.compare td a{color:#8A5A12;font-weight:700;text-decoration:none;}
+  table.compare td a:hover{text-decoration:underline;}
+  .here{display:inline-block;background:var(--gold);color:var(--brown);font-size:10px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border-radius:50px;margin-left:6px;vertical-align:middle;}
+
+  /* ===== How pickup works ===== */
+  .steps-row{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .pstep{background:#fff;border:1px solid #ecdfc4;border-radius:var(--radius);padding:32px 26px;text-align:center;
+    box-shadow:0 10px 26px rgba(79,45,29,.07);border-top:4px solid var(--gold);}
+  .pnum{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;
+    background:var(--gold);color:var(--brown);font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.5rem;margin-bottom:12px;}
+  .pstep h3{margin:.2em 0 .3em;}
+  .pstep p{margin:0;font-size:.95rem;}
+  @media(max-width:780px){.steps-row{grid-template-columns:1fr;}}
+
   /* ===== Why / features ===== */
   .feat{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:20px;}
   .feat .f{background:rgba(240,230,200,.08);border:1px solid rgba(234,188,83,.3);border-radius:var(--radius);padding:28px 24px;}
@@ -359,6 +381,51 @@
   </div>
 </section>
 
+<!-- ===== COMPARE NOODLES ===== -->
+<section class="cream-band" id="compare">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Not Sure Which Noodle?</p>
+      <h2>Pad Thai vs. Our Other Noodle Dishes</h2>
+      <p class="lede">A quick look at how Pad Thai compares to our other noodle favorites.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="compare">
+        <thead>
+          <tr><th>Dish</th><th>Noodle</th><th>Flavor</th><th>Heat</th></tr>
+        </thead>
+        <tbody>
+          <tr class="is-this">
+            <td><strong>Pad Thai</strong> <span class="here">You're here</span></td>
+            <td>Thin rice noodles</td>
+            <td>Sweet, nutty and savory with crushed peanuts</td>
+            <td>Mild</td>
+          </tr>
+          <tr>
+            <td><a href="https://nakhonluangthaicos.com/menu/drunken-noodles/">Drunken Noodles</a></td>
+            <td>Wide flat rice noodles</td>
+            <td>Bold and herby with basil and chili</td>
+            <td>Spicy</td>
+          </tr>
+          <tr>
+            <td><a href="https://nakhonluangthaicos.com/menu/pad-see-ew/">Pad See Ew</a></td>
+            <td>Large rice noodles</td>
+            <td>Savory and mellow in soy sauce</td>
+            <td>Mild</td>
+          </tr>
+          <tr>
+            <td><a href="https://nakhonluangthaicos.com/menu/khao-soi/">Khao Soi</a></td>
+            <td>Egg noodles, soft and crispy</td>
+            <td>Rich Northern Thai curry noodle soup</td>
+            <td>Medium</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="center" style="font-size:.9rem;color:#8a7e6d;margin-top:18px;">Every dish can be made to your desired spice level — just let us know when you order.</p>
+  </div>
+</section>
+
 <!-- ===== WHY US ===== -->
 <section class="brown-band">
   <div class="wrap">
@@ -384,6 +451,35 @@
       </div>
     </div>
     <div class="center mt"><a href="https://nakhonluangthaicos.com/order/" class="btn">Start Your Order</a></div>
+  </div>
+</section>
+
+<!-- ===== HOW PICKUP WORKS ===== -->
+<section id="pickup">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Ready in Minutes</p>
+      <h2>How Pickup Works</h2>
+      <p class="lede">Three steps to hot, fresh Pad Thai to go.</p>
+    </div>
+    <div class="steps-row">
+      <div class="pstep">
+        <span class="pnum">1</span>
+        <h3>Order Online</h3>
+        <p>Pick your Pad Thai, protein and spice level on our ordering page — or call <a href="tel:+17195315175">(719) 531-5175</a>.</p>
+      </div>
+      <div class="pstep">
+        <span class="pnum">2</span>
+        <h3>We Cook It Fresh</h3>
+        <p>Every plate is stir-fried to order in our Rockrimmon kitchen — nothing sits under a heat lamp.</p>
+      </div>
+      <div class="pstep">
+        <span class="pnum">3</span>
+        <h3>Pick It Up</h3>
+        <p>Swing by 805 Village Center Drive and grab your order, hot and ready to go.</p>
+      </div>
+    </div>
+    <div class="center mt"><a href="https://nakhonluangthaicos.com/order/" class="btn">Order Online</a></div>
   </div>
 </section>
 
